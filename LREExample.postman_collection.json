@@ -3,17 +3,21 @@
 		"_postman_id": "ae661103-5b59-4341-ac2a-0eb0443feaa3",
 		"name": "Test",
 		"description": "\t",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "LRE Authentication",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
-				},
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Z2FuZXNoMDEyOmdhbmVzaDAxOQ==",
+						"type": "text"
+					}
+				],
+				"url": "http://10.192.65.37/LoadTest/rest/authentication-point/authenticate",
 				"description": "LRE\t"
 			},
 			"response": []
@@ -58,25 +62,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://10.192.65.37/LoadTest/rest/domains/DEFAULT/projects/SanityTest/tests",
-					"protocol": "http",
-					"host": [
-						"10",
-						"192",
-						"65",
-						"37"
-					],
-					"path": [
-						"LoadTest",
-						"rest",
-						"domains",
-						"DEFAULT",
-						"projects",
-						"SanityTest",
-						"tests"
-					]
-				},
+				"url": "http://10.192.65.37/LoadTest/rest/domains/DEFAULT/projects/SanityTest/tests",
 				"description": "Create a test using API"
 			},
 			"response": []
@@ -112,25 +98,7 @@
 						"type": "text"
 					}
 				],
-				"url": {
-					"raw": "http://10.192.65.37/LoadTest/rest/domains/DEFAULT/projects/SanityTest/testsets",
-					"protocol": "http",
-					"host": [
-						"10",
-						"192",
-						"65",
-						"37"
-					],
-					"path": [
-						"LoadTest",
-						"rest",
-						"domains",
-						"DEFAULT",
-						"projects",
-						"SanityTest",
-						"testsets"
-					]
-				}
+				"url": "http://10.192.65.37/LoadTest/rest/domains/DEFAULT/projects/SanityTest/testsets"
 			},
 			"response": []
 		},
@@ -169,25 +137,7 @@
 					"mode": "raw",
 					"raw": "<TestInstance xmlns=\"http://www.hp.com/PC/REST/API\">\r\n <TestID>{{Test_Id}}</TestID>\r\n <TestSetID>{{TestSet_Id}}</TestSetID>\r\n</TestInstance>"
 				},
-				"url": {
-					"raw": "http://10.192.65.37/LoadTest/rest/domains/DES/projects/RITE/testInstances",
-					"protocol": "http",
-					"host": [
-						"10",
-						"192",
-						"65",
-						"37"
-					],
-					"path": [
-						"LoadTest",
-						"rest",
-						"domains",
-						"DES",
-						"projects",
-						"RITE",
-						"testInstances"
-					]
-				}
+				"url": "http://10.192.65.37/LoadTest/rest/domains/DES/projects/RITE/testInstances"
 			},
 			"response": []
 		},
@@ -196,9 +146,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": ""
-				},
+				"url": "",
 				"description": "Test run in LRE"
 			},
 			"response": []
@@ -214,26 +162,7 @@
 						"type": "text"
 					}
 				],
-				"url": {
-					"raw": "http://10.192.65.37/LoadTest/rest/domains/DEFAULT/projects/SanityTest/Runs/{{Run_Id}}",
-					"protocol": "http",
-					"host": [
-						"10",
-						"192",
-						"65",
-						"37"
-					],
-					"path": [
-						"LoadTest",
-						"rest",
-						"domains",
-						"DEFAULT",
-						"projects",
-						"SanityTest",
-						"Runs",
-						"{{Run_Id}}"
-					]
-				}
+				"url": "http://10.192.65.37/LoadTest/rest/domains/DEFAULT/projects/SanityTest/Runs/{{Run_Id}}"
 			},
 			"response": []
 		}
